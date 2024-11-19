@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+        <meta charset="UTF-8" />
+
+        <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+	Remove this if you use the .htaccess -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+        <title>TCL SERIE C655</title>
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+
+        <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+
+        <!--Script fot Youtube-->
+        <script async src="https://www.youtube.com/iframe_api"></script>
+
+        </script>
+
+        <!-- Jquery 3x -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+                integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+                crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+                integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+                crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+                crossorigin="anonymous"></script>
+
+
+<style>
+                @charset "UTF-8";
+
+                .estilo-landing {
+                        text-align: center;
+                        margin: 0 auto;
+                        background-color: hwb(0 0% 100%);
+                        color:  hsl(0, 0%, 100%);
+                        font-family: "Helvetica Neue", Helvetica;
+                }
+
+                .slick-track {
+                  display: flex;
+                }
+                .slick-track .slick-slide {
+                  display: flex;
+                  height: auto;
+                  align-items: center;
+                  justify-content: center;
+                }
+                .general_container-c655 {
+                        max-width: 820px;
+                        margin: 0 auto;
+                }
+
+                .container-c655 {
+                        max-width: 100% !important;
+                        padding: 20px 0;
+                        margin-top: 0;
+                }
+
+                .mt-30{
+                        margin-top: 30px;
+                }
+                .mt-10{
+                        margin-top: 10px;
+                }
+                .mt-20{
+                        margin-top: 20px;
+                }
+
+                /* slider comparativo */
+                .image-slider {
+                    position:relative;
+                    display: inline-block;
+                    line-height: 0;
+                }
+                .image-slider img {
+                    user-select: none;
+                    max-width: 820px;
+                }
+                .image-slider > div {
+                    position: absolute;
+                    top: 0; bottom: 0; left: 0;
+                    width: 50%;
+                    max-width: 100%;
+                    overflow: hidden;
+                    resize: horizontal;
+                }
+                .image-slider > div:before {
+                    content: '\2944 ';
+                    line-height: 36px;
+                    font-size: 24px;
+                    text-align: end;
+                    padding-right: 3px;
+                    color: black;
+                    display: block;
+                    width: 30px; 
+                    height: 30px;
+                    overflow: hidden;
+                    position: absolute;
+                    resize: horizontal;
+                    right: 3px; bottom: 3px;
+                    background-clip: content-box;
+                    background: linear-gradient(-45deg, rgb(255, 255, 255) 50%, transparent 0);
+                    -webkit-filter: drop-shadow(0 0 4px black);
+                    filter: drop-shadow(0 0 2px black);
+                }
+                /* Fin slider comparativo */
+
+                .type-unique-image {
+                        max-width: 100% !important;
+                        padding: 20px 0;
+                        display: flex;
+                        justify-content: center;
+                }
+
+                .container-c655 p {
+                        font-size: 16px;
+                        text-align: center;
+                }
+
+                .container-c655 h2 {
+                        text-align: center;
+                        font-size: 30pt;
+                        color: hsl(0, 0%, 100%);
+                        letter-spacing: 0px;
+                }
+
+                .container-c655 span {
+                        font-weight: 600;
+                        font-size: 0.8em;
+                }
+
+                .container-c655 h2.bg-green {
+                        background-color: #97BF24;
+                        color: #ffffff;
+                        font-weight: 700;
+                        text-align: center;
+                        width: max-content;
+                        padding: 7px 18px;
+                        font-size: 2em;
+                        display: inline-block;
+                        margin: 0 auto;
+                        border-radius: 10px;
+                }
+
+                .container-c655 ul {
+                        list-style: none;
+                        padding: 0;
+                        margin: 0;
+                }
+
+                .container-c655 ul li h2 {
+                        font-size: 1.3em;
+                        display: inline-block;
+                        margin: 10px 0;
+                }
+
+                .container-c655 ul li::before {
+                        content: "•";
+                        /* Add content: \2022 is the CSS Code/unicode for a bullet */
+                        color: #231F20;
+                        /* Change the color */
+                        font-weight: bold;
+                        /* If you want it to be bold */
+                        display: inline-block;
+                        /* Needed to add space between the bullet and the text */
+                        width: 2em;
+                        /* Also needed for space (tweak if needed) */
+                        font-size: 1.5em;
+                        margin-left: -2em;
+                        /* Also needed for space (tweak if needed) */
+                }
+
+                .container-c655 ul li p {
+                        padding-bottom: 0;
+                        margin-bottom: 0;
+                }
+
+                div.type-h2-p-span,
+                div.type-h2-p {
+                        margin-bottom: 0px;
+                }
+
+                div.type-h2-p-span p,
+                div.type-h2-p p {
+                        font-size: 16px;
+                        text-align: center;
+                }
+
+                div.type-h2-p-span h2,
+                div.type-h2-p h2 {
+                        text-align: center;
+                        font-size: 2em;
+                }
+
+                div.type-h2-p-span span,
+                div.type-h2-p span {
+                        font-weight: 600;
+                        font-size: 0.8em;
+                }
+
+                div.type-h2-p-span h3,
+                div.type-h2-p h3 {
+                        font-weight: 400 !important;
+                        font-size: 1.5em;
+                }
+
+                .kl_img-responsive {
+                        width: 100%;
+                        height: auto;
+                }
+
+                .kl_img-centered {
+                        margin: 0 auto;
+                }
+
+                .row.display-flex {
+                        display: flex;
+                        flex-wrap: wrap;
+                }
+
+                .row.display-flex>[class*=col-] {
+                        display: flex;
+                        flex-direction: column;
+                        align-self: center;
+                }
+
+                @media (max-width: 767px) {
+                        .type-card-image-left .row {
+                                flex-direction: column-reverse;
+                        }
+                        .image-slider img {
+                        user-select: none;
+                        max-width: 95vw;
+                        }
+                        .column-rev-dflex{
+                                flex-direction: column-reverse !important;
+                        }
+                }
+
+                .contrast {
+                        background-color: #030402;
+                }
+
+                .contrast h3,
+                .contrast h2,
+                .contrast p,
+                .contrast span {
+                        color: #ffffff;
+                }
+
+                .contrast h2 {
+                        font-size: 30pt;
+                }
+
+                .contrast h3 {
+                        padding: 0;
+                        margin: 0 0 15px 0;
+                        font-weight: 300;
+                        font-size: 30pt;
+                }
+
+                .contrast p {
+                        font-weight: 300;
+                        font-size: 15pt;
+                        line-height: 18pt;
+                }
+
+                .light h2 {
+                        font-size: 30pt;
+                }
+
+                .light h3 {
+                        padding: 0;
+                        margin: 0 0 15px 0;
+                        font-weight: 300;
+                        font-size: 30pt;
+                }
+
+                .light p {
+                        font-weight: 300;
+                        font-size: 15pt;
+                        line-height: 18pt;
+                }
+
+                .no-margin {
+                        margin: 0 !important;
+                }
+
+                .no-padding {
+                        padding: 0 !important;
+                }
+
+                /*# sourceMappingURL=child.css.map */
+        
+                                body > div > div:nth-child(37) > div:nth-child(2){
+                                        margin-bottom: 30px !important;
+                                }
+
+                                .espaciado-galeria{margin-top: 30px;
+                                }
+
+                                @media(max-width: 480px){
+                                        .espaciado-galeria{margin-top: 0px !important;
+                                        }  
+                                        .justify-content-center{
+                                                display: flex;
+                                                flex-direction: column;
+                                                align-items: center;
+                                        }
+                                        .col-xs-12{
+                                                width: auto !important;
+                                                margin-left: 10px;
+                                                margin-right: 10px;;
+                                        }
+                                        .video1{
+                                                height: auto !important;
+                                                margin-top: 10px;
+                                        }
+                                        .logos, .sec13, .sec15-2{
+                                                padding: 0;
+                                        }
+                                        .sonidofhd, .sec7, .sec8, .sec9, .sec10, .sec11{
+                                                margin-top: 0px !important;
+                                                padding-bottom: 0;
+                                        }
+                                        .secaipq img, .secaipq h2, .secaipq p{
+                                                margin-top: 0 !important;
+                                                margin-bottom: 0 !important;
+                                        }
+                                        .logoheyg img, .logoheyg h2, .logoheyg p{
+                                                margin-bottom: 10px !important;
+                                        }
+                                        .handsfree img, .handsfree h2, .handsfree p{
+                                                margin-bottom: 10px !important;
+                                                margin-top: 0 !important;
+                                        }
+                                        .sec21 p{
+                                                margin-top: 10px !important;
+                                        }
+                                        .sec25 , .sec26{
+                                                margin-top: 0 !important;
+                                        }
+                                }
+</style> 
+</head>
+
+<body>
+        <div class="estilo-landing">
+
+        
+        <!--TCL Landing Wrapper-->
+        <div class="general_container-c655 container-c655-fluid">
+
+                <!-- Banner principal KV -->
+                <div class="container-c655 type-unique-image">
+                        <div class="row">
+
+                                <div class="col-xs-12">
+                                        <img class="img-responsive" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/PRINCIPAL.jpg?v=1731945125"
+                                                alt="c655"
+                                                title="c655" />
+                                               
+                                </div>
+                        </div>
+                </div>
+                <!-- end Banner principal KV-->
+
+                <!-- Banner logos -->
+                <div class="container-c655 type-unique-image logos" style="margin-top: -10px; margin-bottom: -10px;">
+                        <div class="row">
+
+                                <div class="col-xs-12" style="width: 100%">
+                                        <img class="img-responsive" style="width: 100%;height: auto;" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/BOARD_C655-2.jpg?v=1731945045"
+                                                alt="LOGOS-2"
+                                                title="LOGOS-2" />
+                                </div>
+                        </div>
+                </div>
+                <!-- end Banner Logos-->
+
+                <!-- Excelente calidad -->
+                        <div class="container-c655 type-h2-p sonidofhd" style="margin-top: 20px;">
+                                <div class="row d-flex justify-content-center">
+                                        <div class="col-xs-12 col-md-6 col-6" style="padding-top:0;display: grid;
+                                        justify-items: center;width: 100%;">
+                                                <h2>Excelente calidad de imagen</h2>
+                                                <p style="margin-top:0">El televisor QLED C655 puede mostrar una gama más amplia de color hasta un 95% <br/> según los estándares DCI-P3.</p>
+                                        </div>
+                                         <div class="col-xs-12 col-md-6 col-6" style="width: 100%;">
+                                                <video class="video1" width="100%" height=500 muted playsinline loop autoplay="1">
+                                                        <source src="https://cdn.shopify.com/videos/c/o/v/e15787a3fac3480ea6b232aa9f54276e.mp4" type="video/mp4">
+                                                </video>
+                                        </div>
+                                </div>
+                        </div>
+                <!--end Excelente calidad -->
+
+                <!-- HDR10 -->
+                <div class="container-c655 type-h2-p" style="margin-top: 20px;">
+                        <div class="row d-flex justify-content-center">
+                                <div class="col-xs-12 col-md-6 col-6" style="padding-top:0;display: grid;
+                                justify-items: center;width: 100%;">
+                                        <!--Imagen 2-->
+                                        <img style="margin: 0 auto;width: 200px;height: auto;" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/HDR-10.png?v=1731945039">
+                                        <h2 style="margin-top: 0;">Disfruta de detalles sobre detalles</h2>
+                                        <p style="margin-top:0">High Dynamic Range (HDR), la última tecnología para contenidos UHD, brinda una experiencia superior con un brillo sorprendente,detalles de sombras excepcionales y colores vivos. Disfruta de increíbles detalles de imagen como si tuvieras un cine en casa. </p>
+                                </div>
+                                <div class="image-slider mt-20">
+                                        <div>
+                                                <img src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/HDR-IMAGEN.jpg?v=1731945044" alt="4khd1" />
+                                        </div>
+                                        <img src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/HDR-IMG2.webp?v=1731945042" alt="4khd2" />
+                                </div>
+                                
+                        </div>
+                </div>
+                <!-- end HDR10 -->
+                
+                <!-- Dolby vision -->
+                <div class="container-c655 type-h2-p sec4">
+                        <div class="row d-flex justify-content-center" style="display: flex;">
+                                <div class="col-xs-12 col-md-6 col-6" style="padding-top:0;display: grid;
+                                justify-items: center;width: 40%;">
+                                        <!--Imagen 2-->
+                                        <img style="margin-bottom: -15px;width: 200px;height: auto;" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/DOLVY-VISION.png?v=1731945030">
+                                        <h2>Vive una experiencia inmersiva</h2>
+                                        <p style="margin-top:0">Imagina estar sentado en un teatro, viendo cómo se abren las cortinas y cómo entran los actores. Una escena fascinante está justo frente a ti. Eso es exactamente lo que verás con Dolby Vision. Más que llevar el cine a casa, estás en él.</p>
+                                </div>
+                                 <div class="col-xs-12 col-md-6 col-6" style="width: 60%;">
+                                        <img style="width: 100%;height: auto;" class="img-responsive" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/DOLBY-VISION-IMAGEN.jpg?v=1731945045" alt="dolby-vision"
+                                                title="dolby-vision" />
+                                </div>
+                        </div>
+                </div>
+                <!-- end Dolby vision -->
+
+                <!-- AIPQ --> 
+                <div class="container-c655 type-h2-p sec5">
+                        <div class="row d-flex justify-content-center" style="display: flex;">
+                                <div class="col-xs-12 col-md-6 col-6" style="width: 60%;">
+                                        <img style="width: 100%;height: auto;" class="img-responsive" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/AIPQ-IMAGEN.jpg?v=1731945044" alt="aipq"
+                                                title="AiPQ" />
+                                </div>
+                                <div class="col-xs-12 col-md-6 col-6 secaipq" style="padding-top:0;display: grid;
+                                justify-items: center;width: 40%;">
+                                        <!--Imagen 5-->
+                                        <img style="margin-bottom: -15px;width: 200px;height: auto;" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/AIPQ.png?v=1731945026">
+                                        <h2 style="margin: -13px;">Una imagen maravillosa</h2>
+                                        <p style="margin: top -13px;">El algoritmo TCL habilitado para AiPQ Engine 3.0 procesa contenidos con 4K estable y de alta calidad.  </p>
+                                </div>
+                        </div>
+                </div>
+                <!-- AIPQ -->
+
+         
+                 <!-- Ai COLOR -->
+                 <div class="container-c655 type-h2-p sec7" style="margin-top: 20px;">
+                        <div class="row d-flex justify-content-center" style="display: flex;">
+                                <div class="col-xs-12 col-md-6 col-6" style="padding-top:0;display: grid;
+                                justify-items: center;width: 100%;">
+                                        <!--Imagen 2-->
+                                        <img style="margin: 0 auto;width: 210px;height: auto;" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/AI-COLOR.png?v=1731945026">
+                                        <p style="margin-top:0">Ai-Color recrea imágenes ajustando múltiples especificaciones, incluído el volumen de color, la saturación y el contraste. Los tonos vibrantes que tienes en frente han sido recreados y fijados de una manera realista con un toque de estílo artístico.</p>
+                                        <img style="width: 100%;height: auto;" class="img-responsive" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/AI-COLOR-IMAGEN.jpg?v=1731945045" alt="Ai-Color"
+                                        title="Ai-Color" />
+                                </div>
+                        </div>
+                </div>
+                <!-- end Ai COLOR -->
+
+                 <!-- Ai Clarity -->
+                 <div class="container-c655 type-h2-p sec8" style="margin-top: 20px;">
+                        <div class="row d-flex justify-content-center" style="display: flex;">
+                                <div class="col-xs-12 col-md-6 col-6" style="padding-top:0;display: grid;
+                                justify-items: center;width: 100%;">
+                                        <!--Imagen 2-->
+                                        <img style="margin: 0 auto;width: 200px;height: auto;" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/AI-CLARITY.png?v=1731945027">
+                                        <p style="margin-top:0">Ai-Clarity reconoce la imagen en cada detalle. Analiza las imágenes en función de su resolución original y muestra los mejores resultados visuales nítidos en escalado de baja resolución y  reducción de ruido.</p>
+                                        <img style="width: 100%;height: auto;" class="img-responsive" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/AI-CLARITY-IMAGEN.jpg?v=1731945042" alt="AI-CLARITY"
+                                        title="AI-CLARITY" />
+                                </div>
+                        </div>
+                </div>
+                <!-- end Ai Clarity -->
+
+                 <!-- Ai Motion -->
+                 <div class="container-c655 type-h2-p sec9" style="margin-top: 20px;">
+                        <div class="row d-flex justify-content-center" style="display: flex;">
+                                <div class="col-xs-12 col-md-6 col-6" style="padding-top:0;display: grid;
+                                justify-items: center;width: 100%;">
+                                        <!--Imagen 2-->
+                                        <img style="margin: 0 auto;width: 200px;height: auto;" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/AI-MOTION.png?v=1731945027">
+                                        <p style="margin-top:0">Ai-Motion detecta con sensibilidad los objetos que se mueven rápidamente. Calcula el movimiento en términos de frecuencia de actualización y número de fotogramas, solo para restaurar la imagen y compensar el desenfoque y desgarro.</p>
+                                        <img style="width: 100%;height: auto;" class="img-responsive" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/AI-MOTION-IMAGEN.jpg?v=1731945045" alt="Ai-Motion"
+                                        title="Ai-Motion" />
+                                </div>
+                        </div>
+                </div>
+                <!-- end Ai Motion -->
+
+                 <!-- Ai Contrast -->
+                 <div class="container-c655 type-h2-p sec10" style="margin-top: 20px;">
+                        <div class="row d-flex justify-content-center" style="display: flex;">
+                                <div class="col-xs-12 col-md-6 col-6" style="padding-top:0;display: grid;
+                                justify-items: center;width: 100%;">
+                                        <!--Imagen 2-->
+                                        <img style="margin: 0 auto;width: 200px;height: auto;" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/AI-CONTRAST.png?v=1731945027">
+                                        <p style="margin-top:0">Ai-Contrast revela la situación extrema de una imagen. Reproduce la realidad mediante la optimización dinámica de la relación de contraste para adaptarse a diferentes escenarios visuales, incluidos la oscuridad, brillos y numerosos detalles.</p>
+                                        <img style="width: 100%;height: auto;" class="img-responsive" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/AI-CONTRAST-IMAGEN.jpg?v=1731945038" alt="Ai-Contrast"
+                                        title="Ai-Contrast"/>
+                                </div>
+                        </div>
+                </div>
+                <!-- end Ai Contrast -->
+
+                 <!-- Ai HDR -->
+                 <div class="container-c655 type-h2-p sec11" style="margin-top: 20px;">
+                        <div class="row d-flex justify-content-center" style="display: flex;">
+                                <div class="col-xs-12 col-md-6 col-6" style="padding-top:0;display: grid;
+                                justify-items: center;width: 100%;">
+                                        <!--Imagen 2-->
+                                        <img style="margin: 0 auto;width: 200px;height: auto;" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/AI-HDR.png?v=1731945027">
+                                        <p style="margin-top:0">Ai-HDR hace que tu televisor sea más inteligente para decodificar múltiples formatos HDR. Es más que colores naturales, brillo y oscuridad.  </p>
+                                        <img style="width: 100%;height: auto;" class="img-responsive" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/AI-HDR.jpg?v=1731945046" alt="Ai-HDR"
+                                        title="Ai-HDR" />
+                                </div>
+                        </div>
+                </div>
+                <!-- end Ai HDR -->
+                
+                 <!-- MEMC -->
+                <div class="container-c655 type-h2-p sec12">
+                        <div class="row d-flex justify-content-center" style="display: flex;">
+                                <div class="col-xs-12 col-md-6 col-6" style="width: 60%;">
+                                        <img style="width: 100%;height: auto;" class="img-responsive" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/MEMC-IMAGEN.jpg?v=1731945123" alt="memc"
+                                                title="memc" />
+                                </div>        
+                                <div class="col-xs-12 col-md-6 col-6" style="padding-top:0;display: grid;
+                                justify-items: center;width: 40%;">
+                                        <img style="margin: 0 auto;width: 200px;height: auto;" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/MECM.png?v=1731945114">
+                                        <h2>No te pierdas ningún detalle en los movimientos rápidos.</h2>
+                                        <p style="margin-top:0">El algoritmo MEMC reduce el desenfoque de la pantalla de movimiento, reduce el desgarro de la imagen y garantiza una escena más suave.</p>
+                                </div>        
+                        </div>        
+                </div>        
+                <!-- end MEMC -->
+                       
+                <!-- Dolby Atmos --> 
+                <div class="container-c655 type-h2-p sec22">
+                        <div class="row d-flex justify-content-center" style="display: flex;">
+                                <div class="col-xs-12 col-md-6 col-6" style="padding-top:0;display: grid;
+                                justify-items: center;width: 40%;">
+                                        <!--Imagen 5-->
+                                        <img style="margin: 0 auto;width: 150px;height: auto;" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/DOLBY-ATMOS.png?v=1731945028">
+                                        <h2>Disfruta de un sonido teatral</h2>
+                                        <p style="margin-top:0">Dolby Atmos trasciende los límites de los canales convencionales para ofrecerte un audio tridimensional. Puedes experimentar una claridad asombrosa, un mayor impacto emocional y un sonido inmersivo que llena tu habitación.</p>
+                                </div>
+                                <div class="col-xs-12 col-md-6 col-6" style="width: 60%;">
+                                        <img style="width: 100%;height: auto;" class="img-responsive" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/DOLBY-ATMOS-IMAGEN.jpg?v=1731945044" alt="HEY-GOOGLE"
+                                        title="HEY-GOOGLE" />
+                                </div>
+                        </div>
+                </div>
+                <!-- end Dolby Atmos -->
+        
+                <!-- DTS HD --> 
+                <div class="container-c655 type-h2-p sec21">
+                        <div class="row d-flex justify-content-center" style="display: flex;">
+                                <div class="col-xs-12 col-md-6 col-6" style="width: 60%;">
+                                        <img style="width: 100%;height: auto;" class="img-responsive" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/DTS-HD-IMAGEN.jpg?v=1731945044" alt="memc"
+                                        title="memc" />
+                                </div>
+                                <div class="col-xs-12 col-md-6 col-6" style="padding-top:30px;display: grid;
+                        justify-items: center;width: 40%;align-items: center;">
+                                <!--Imagen 5-->
+                                <img style="margin: 0 auto;width: 150px;height: auto;" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/DTS_HD.png?v=1731945030">
+                                <p style="margin-top:0">DTS-HD y DTS® Virtual:X™ producen un sonido envolvente que parece surgir por encima, al lado y detrás, brindando una experiencia inmersiva en cualquier parte de la habitación. </p>
+                        </div>
+                </div>
+                </div>
+                <!-- end DTS HD -->
+                
+                 <!-- GAMMING IN DOLBY --> 
+                 <div class="container-c655 type-h2-p sec17">
+                        <div class="row d-flex justify-content-center" style="display: flex;">
+                                <div class="col-xs-12 col-md-6 col-6" style="width: 100%;">
+                                        <img style="margin: 0 auto;width: 210px;height: auto;" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/GAMING.png?v=1731945025">
+                                        <p style="margin-top: 20px;">Siempre tendrás la mejor imagen de juego con Dolby Vision. Accede a cada detalle y profundidad que este tiene por ofrecerte.</p>
+                                        <div class="image-slider mt-20">
+                                                <div>
+                                                        <img src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/DOLBY-VISION-IMAGEN-0.jpg?v=1731945044" alt="4khd1" />
+                                                </div>
+                                                <img src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/GAMIN-IN-DOLBY-VISION.jpg?v=1731945043" alt="4khd2" />
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+                <!-- end GAMMING IN DOLBY -->
+                
+                <!-- GAME MASTER --> 
+                <div class="container-c655 type-h2-p sec18">
+                        <div class="row d-flex justify-content-center" style="display: flex;">
+                                <div class="col-xs-12 col-md-6 col-6" style="width: 100%;">
+                                        <img style="margin: 0 auto;width: 310px;height: auto;" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/GAME_MASTER.png?v=1731945030">
+                                        <p style="margin-top: 10px;">Experimenta juegos de otro nivel con la mejor tecnología. Desbloquea las opciones avanzadas de visualización y audio con el game master que te ofrece la referencia C655 </p>
+                                        <img style="width: 100%;height: auto;" class="img-responsive" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/GAME-MASTER-IMAGEN.jpg?v=1731945043" alt="google-tv"
+                                        title="google-tvç" />
+                                </div>
+                        </div>
+                </div>
+                <!-- end GAME MASTER -->
+
+                 <!-- GAME BAR -->
+                 <div class="container-c655 type-h2-p" style="margin-top: 20px;">
+                        <div class="row d-flex justify-content-center">
+                                <div class="col-xs-12 col-md-6 col-6" style="padding-top:0;display: grid;
+                                justify-items: center;width: 100%;">
+                                        <img style="margin: 0 auto;width: 100px;height: auto;" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/game-bar.png?v=1731945044">
+                                        <p style="margin-top:10px">La barra de juego permite mantenerte al tanto de tu juego mientras controlas claramente la pantalla y los parámetros del juego (velocidad de fotogramas, HDR, etc.) a lo largo del juego y los configura rápidamente.</p>
+                                </div>
+                                 <div class="col-xs-12 col-md-6 col-6" style="width: 100%;">
+                                        <video class="video1" width="100%" height=500 loop muted playsinline autoplay="1">
+                                                <source src="https://cdn.shopify.com/videos/c/o/v/48408e1c4dc0415485005b6f6fab7eb8.mp4" type="video/mp4">
+                                        </video>
+                                </div>
+                        </div>
+                </div>
+                <!--end GAME BAR -->
+                              
+                <!-- HDMI 2.1  --> 
+                <div class="container-c655 type-h2-p sec20">
+                        <div class="row d-flex justify-content-center" style="display: flex;">
+                                <div class="col-xs-12 col-md-6 col-6" style="padding-top:0;display: grid;
+                                justify-items: center;width: 40%;">
+                                        <!--Imagen 5-->
+                                        <img style="margin: 0 auto;width: 150px;height: auto;" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/HDM_2.1.png?v=1731945038">
+                                        <h2>Una respuesta mucho más rápida</h2>
+                                        <p style="margin-top:0">Para los aficionados a los juegos, un televisor receptivo es tan importante como uno con buenas imágenes. Con HDMI 2.1 y ALLM, experimentarás una latencia más baja y la mejor configuración de imagen para jugar automáticamente.</p>
+                                </div>
+                                <div class="col-xs-12 col-md-6 col-6" style="width: 60%;">
+                                        <img style="width: 100%;height: auto;" class="img-responsive" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/HDMI-2.1.jpg?v=1731945045" alt="HEY-GOOGLE"
+                                        title="HEY-GOOGLE" />
+                                </div>
+                        </div>
+                </div>
+                <!-- end HDMI 2.1 -->
+      
+                <!-- Google TV --> 
+                <div class="container-c655 type-h2-p sec13">
+                        <div class="row d-flex justify-content-center" style="display: flex;">
+                                <div class="col-xs-12 col-md-6 col-6" style="width: 100%;">
+                                        <img style="margin: 0 auto;width: 230px;height: auto;" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/GOOGLE-TV.png?v=1731945038">
+                                        <h2 style="margin: -5px;">Entretenimiento personalizado</h2>
+                                        <p style="margin-top: 20px;">Descubre nuevas películas y programas. Las sugerencias están basadas en lo que has visto y te interesa para que sea más fácil encontrar tu próximo contenido favorito.</p>
+                                        <img style="width: 100%;height: auto;" class="img-responsive" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/GOOGLE-TV-IMAGEN.jpg?v=1731945044" alt="google-tv"
+                                        title="google-tv" />
+                                </div>
+                        </div>
+                </div>
+                <!-- end Google TV -->
+
+                <!-- Sección Hey Google --> 
+                <div class="container-c655 type-h2-p sec15">
+                        <div class="row d-flex justify-content-center column-rev-dflex" style="display: flex;">
+                                <div class="col-xs-12 col-md-6 col-6" style="width: 60%;">
+                                        <img style="width: 100%;height: auto;" class="img-responsive" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/HANDS_FREE_VOICE.jpg?v=1731945040" alt="memc"
+                                                title="memc" />
+                                </div>
+                                <div class="col-xs-12 col-md-6 col-6 handsfree" style="padding-top:0;display: grid;
+                                justify-items: center;width: 40%;">
+                                        <!--Imagen 5-->
+                                        <img style="margin-top: 30px;width: 180px;height: auto;" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/HEY_GOOGLE.png?v=1731945029">
+                                        <h2 style="margin-top: -20px;">Entretenimiento al alcance de tu voz</h2>
+                                        <p style="margin-top:-10px">Tu televisor ahora es más útil que nunca. Preguntale a Google sobre el clima, los resultados deportivos, navega por la interfaz de tu tv o dale instrucciones a los dispositivos inteligentes de tu hogar con solo decir las palabras "Hey Google"</p>
+                                </div>
+                        </div>
+                </div>
+                <!-- end Hey Google -->
+                
+                <!-- Google Meet --> 
+               <div class="container-c655 type-h2-p sec15-2">
+                        <div class="row d-flex justify-content-center" style="display: flex;">
+                                <div class="col-xs-12 col-md-6 col-6" style="width: 40%;">
+                                <img style="margin: 0 auto;width: 220px;height: auto;" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/GOOGLE-MEET.png?v=1731945035">
+                                        <h2 style="margin-top:0">Conéctate con el mundo</h2>
+                                        <p style="margin-top:0">Con la aplicación de chat de video de Google, puedes hacer fácilmente llamadas individuales o grupales </p>
+                                        <P style="margin-top:0; font-size: 10px;"> *Para realizar una videollamada se requiere la instalación de una cámara compatible con el tv.</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6 col-6" style="padding-top:0;display: grid;
+                                justify-items: center;width: 60%;">
+                                        <img style="width: 100%;height: auto;" class="img-responsive" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/GOOGLE-MEET.jpg?v=1731945043" alt="memc"
+                                                title="memc" />
+                                </div>
+                        </div>
+                </div>
+                <!-- end Google Meet -->
+                                
+              <!-- HANDS FREE VOICE -->
+              <div class="container-c655 type-h2-p sec12">
+                        <div class="row d-flex justify-content-center" style="display: flex;">
+                                <div class="col-xs-12 col-md-6 col-6 logoheyg" style="padding-top:0;display: grid;
+                                justify-items: center;width: 100%;">
+                                        <img style="margin: 0 auto;width: 220px;height: auto;" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/HANDS-FREE-VOICE-CONTROL.webp?v=1731945038">
+                                        <h2 style="margin-top:0">Entretenimiento al alcance de tu voz</h2>
+                                        <p style="margin-top:0">Con la tecnología del Asistente de Google, el control por voz manos libres te libera del control remoto. Cambia de canal, configura recordatorios y explora los servicios de transmisión a través de simples comandos de voz. </p>
+                                        <img style="width: 100%;height: auto;" class="img-responsive" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/HEY-GOOGLE-BANNER.webp?v=1731945038" alt="HEY-GOOGLE"
+                                        title="HEY-GOOGLE" />
+                                </div>
+                        </div>
+                </div>
+                <!-- end HANDS FREE VOICE -->
+                
+                <!-- ACCESOS DIRECTOS --> 
+                <div class="container-c655 type-h2-p sec2jun" style="margin-top: 0px;">
+                        <div class="row d-flex justify-content-center">
+                                <div class="col-xs-12 col-md-6 col-6" style="padding-top:0;display: grid;
+                                justify-items: center;width: 100%;">
+                                        <h2>Accesos directos en tu control remoto</h2>
+                                        <p style="margin-top:0">Accede directamente a tus plataformas de streaming: Netflix y Prime Video y la plataforma de YouTube. Guard: instala aplicaciones de forma más segura y optimiza tu televisor para que funcione mejor. Media: accede directamente a tus archivos multimedia, a las fotos que realices desde tu televisor, a videos, archivos y contenido almacenado en una USB.TCL Channel: agrupa tus aplicaciones favoritas en un solo lugar.</p>
+                                </div>
+                                <div class="col-xs-12 col-md-6 col-6" style="width: 100%;">
+                                        <video class="video1" width="100%" height=500 muted autoplay="1" playsinline loop >
+                                                <source src="https://cdn.shopify.com/videos/c/o/v/630af498028f46338f44d8fa1e0cd365.mp4" type="video/mp4">
+                                        </video>
+                                </div>
+                        </div>
+                 </div>
+                  <!-- end ACCESOS DIRECTOS -->
+                  
+                <!-- CONFOT PARA TUS OJOS -->
+                <div class="container-c655 type-h2-p sec11" style="margin-top: 20px;">
+                        <div class="row d-flex justify-content-center" style="display: flex;">
+                                <div class="col-xs-12 col-md-6 col-6" style="padding-top:0;display: grid;
+                                justify-items: center;width: 100%;">
+                                        <img style="margin: 0 auto;width: 230px;height: auto;" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/Low-Blue-Ray-Mode.png?v=1731945114">
+                                        <h2>Confort para tus ojos</h2>
+                                        <p style="margin-top:0">El televisor TCL C655 ha sido certificado como una solución de hardware de luz azul baja por TÜV Rheinland. Siéntete libre de sumergirte en un maratón de películas sin ojos secos ni fatiga ocular. Tu vista siempre está protegida.</p>
+                                        <img style="width: 100%;height: auto;" class="img-responsive" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/BLOQUE-23.jpg?v=1731957919" alt="confort"
+                                        title="Confort" />
+                                </div>
+                        </div>
+                </div>
+                <!-- end CONFORT PARA TUS OJOS -->
+                         
+                <!-- DE TELEVISION A ESTACION DE TRABAJO --> 
+                <div class="container-c655 type-h2-p sec24">
+                        <div class="row d-flex justify-content-center" style="display: flex;">
+                                <div class="col-xs-12 col-md-6 col-6" style="width: 60%;">
+                                        <img style="width: 100%;height: auto;" class="img-responsive" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/MIRA-CAST-FOR-PC-IMAGEN.jpg?v=1731945122" alt="memc"
+                                        title="memc" />
+                                </div>
+                                <div class="col-xs-12 col-md-6 col-6" style="padding-top:0;display: grid;
+                        justify-items: center;width: 40%;">
+                                <!--Imagen 5-->
+                                <img style="margin: 0 auto;width: 230px;height: auto;" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/MIRA_CAST_FOR_PC.png?v=1731945114">
+                                <h2>De televisor a estación de trabajo</h2>
+                                <p style="margin-top:0">Transmite el contenido de  tu computador portátil al televisor de pantalla grande con una resolución de hasta 4K  para tener  todo tu trabajo bajo control más fácil y rápido.</p>
+                        </div>
+                </div>
+                </div>
+                <!-- end DE TELEVISION A ESTACION DE TRABAJO -->
+
+                <!-- TU PROXIMO ENTRENADOR PERSONAL -->
+                <div class="container-c655 type-h2-p sec25" style="margin-top: 20px;">
+                        <div class="row d-flex justify-content-center" style="display: flex;">
+                                <div class="col-xs-12 col-md-6 col-6" style="padding-top:0;display: grid;
+                                justify-items: center;width: 100%;">
+                                        <h2>Tu próximo entrenador personal</h2>
+                                        <p style="margin-top:0">Encuentra con facilidad el contenido fitness que ha sido cuidadosamente seleccionado para ti en YouTube u otras plataformas. </p>
+                                        <img style="width: 100%;height: auto;" class="img-responsive" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/BLOQUE-25.jpg?v=1731945043" alt="confort"
+                                        title="Confort" />
+                                </div>
+                        </div>
+                </div>
+                <!-- end TU PROXIMO ENTRENADOR PERSONAL -->
+
+                <!-- UN DISEÑO QUE SE ADAPTA -->
+                <div class="container-c655 type-h2-p sec26" style="margin-top: 20px;">
+                        <div class="row d-flex justify-content-center" style="display: flex;">
+                                <div class="col-xs-12 col-md-6 col-6" style="padding-top:0;display: grid;
+                                justify-items: center;width: 100%;">
+                                        <h2>Un diseño que se adapta a todos los espacios</h2>
+                                        <p style="margin-top:0">Con un cuerpo ultradelgado, el C655 puede encajar perfectamente en su espacio, resaltando en tu hogar como si fuese una obra de arte. </p>
+                                        <img style="width: 100%;height: auto;" class="img-responsive" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/BLOQUE-26.jpg?v=1731945044" alt="confort"
+                                        title="Confort" />
+                                </div>
+                        </div>
+                </div>
+                <!-- end UN DISEÑO QUE SE ADAPTA -->
+
+                <!--Sección 27-->
+                <div class="container-c655 type-unique-image">
+                        <div class="row">
+
+                                <div class="col-xs-12">
+                                <h2 style="font-size: 2em;">Respaldo y garantía</h2>
+                                <img style="margin: 0 auto;width: 110px;height: auto;" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/LOGOS-TCL.webp?v=1731945113">
+                                <p style="margin-top:0">Tenemos múltiples opciones para atender tus dudas y comentarios. ¡Contáctanos!</p>
+                                        <img class="img-responsive" src="https://cdn.shopify.com/s/files/1/0535/0608/0925/files/lifestyle-images-1.jpg?v=1731945127"
+                                                alt="c655"
+                                                title="c655" />
+                                </div>
+                        </div>
+                </div>
+                <!--end sección 27-->
+                
+        </div>
+ </div>   
+ 
+</html>
